@@ -8,10 +8,11 @@ use \Student;
 class CSM implements Passable 
 {
     public $id = 1;
+    public $name = 'CSM';
 
     public function average(Student $student)
     {
-        $student->board = 'CSM';
+        $student->board = $this;
         $sum = array_sum($student->grades);
         $student->averageResult = $sum / count($student->grades);
 
