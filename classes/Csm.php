@@ -7,14 +7,15 @@ use \Student;
 
 class CSM implements Passable 
 {
+    public $id = 1;
+
     public function average(Student $student)
     {
         $sum = array_sum($student->grades);
+        $student->averageResult = $sum / count($student->grades);
 
-        if($sum / count($student->grades) >= 7){
-            return true;
-        }
+        $student->finalResult = $student->averageResult >= 7 ? 'pass' : 'fail';
 
-        return false;
+        return json_encode($student);
     }
 }

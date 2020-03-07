@@ -11,10 +11,9 @@ class CSMB implements Passable
 
     public function average(Student $student)
     {
-        if(max($student->grades) >= 8){
-            return true;
-        }
+        $student->averageResult = max($student->grades);
+        $student->finalResult = max($student->grades) >= 8 ? 'pass' : 'fail';
 
-        return false;
+        return xmlrpc_encode($student);
     }
 }
