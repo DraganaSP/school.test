@@ -4,7 +4,8 @@ class Student {
     public $name;
     public $board;
     public $grades= [];
-
+    public $averageResult;
+    public $finalResult;
 
     public function __construct($name, Passable $board)
     {
