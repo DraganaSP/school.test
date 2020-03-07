@@ -11,6 +11,7 @@ class CSM implements Passable
 
     public function average(Student $student)
     {
+        $student->board = 'CSM';
         $sum = array_sum($student->grades);
         $student->averageResult = $sum / count($student->grades);
 
