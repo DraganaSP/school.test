@@ -1,0 +1,10 @@
+{
+  "autoload": {
+    "classmap": [
+      "interfaces/Passable.php",
+      "classes/Csm.php",
+      "classes/Csmb.php",
+      "classes/Student.php"
+    ]
+  }
+}
