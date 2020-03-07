@@ -11,6 +11,7 @@ class CSMB implements Passable
 
     public function average(Student $student)
     {
+        $student->board = 'CSMB';
         $student->averageResult = max($student->grades);
         $student->finalResult = max($student->grades) >= 8 ? 'pass' : 'fail';
 

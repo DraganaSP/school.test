@@ -2,6 +2,7 @@
   "autoload": {
     "classmap": [
       "interfaces/Passable.php",
+      "db/Connection.php",
       "classes/Csm.php",
       "classes/Csmb.php",
       "classes/Student.php"
